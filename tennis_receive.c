@@ -33,7 +33,7 @@ void handle_sigusr1(int signum, siginfo_t *info, void *context) {
     printf("\007");
 
     if((passing - passing %100) / 100 >= 11) { //score of receiver is the (passing - passing %100) / 100)
-        printf("Game over, the server win!\n");
+        printf("Game over, the receiver win!\n");
         printf("Score - Reciever: Server : %d: %d\n", (passing - passing %100) / 100, passing % 100);
         //send the signal back
         union sigval value;
@@ -45,7 +45,7 @@ void handle_sigusr1(int signum, siginfo_t *info, void *context) {
 
         exit(0);
     } else if(passing % 100 >= 11) { //the score of server = passing % 100
-        printf("Game over, the receiver win!\n");
+        printf("Game over, the server win!\n");
         printf("Score - Reciever: Server : %d: %d\n", (passing - passing %100) / 100, passing % 100);
         //send the signal back
         union sigval value;
